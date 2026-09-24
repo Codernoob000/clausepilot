@@ -1,0 +1,26 @@
+INDEPENDENT CONTRACTOR CONSULTING AGREEMENT
+
+This Consulting Agreement ("Agreement") is made effective as of March 1, 2025, by and between HyperScale AI Labs Inc. ("Company") and the consulting engineer ("Consultant").
+
+1. ENGAGEMENT AND DELIVERABLES
+Consultant agrees to provide full-stack software development, machine learning pipeline integration, and infrastructure support as requested by Company. Consultant shall perform Services in a diligent, workmanlike manner.
+
+2. COMPENSATION & PAYMENT SCHEDULE
+Company shall compensate Consultant at the hourly rate of $95.00 per hour. Invoices shall be submitted bi-weekly. Company shall remit payment within forty-five (45) calendar days following receipt and internal auditing of timesheets. Company may delay payment if timesheet detail is deemed insufficient by Company management.
+
+3. EXCLUSIVITY AND NON-COMPETITION
+3.1 Exclusivity: Consultant agrees that during the term of this Agreement, Consultant shall dedicate primary professional working hours to Company and shall not accept engagements with any third party in the artificial intelligence or machine learning industry without prior written consent.
+3.2 Post-Termination Non-Compete: For a period of twelve (12) months following the termination of this Agreement for any reason, Consultant shall not directly or indirectly develop, consult for, advise, or become employed by any business entity competing with Company's core software products in North America or Europe.
+
+4. PROPRIETARY INFORMATION & IP INVENTIONS
+4.1 Inventions Assignment: Consultant agrees that all inventions, discoveries, designs, source code, data architectures, and improvements conceived or reduced to practice by Consultant, either alone or with others, during the term of this Agreement shall be the sole and exclusive property of Company from inception.
+4.2 Pre-Existing Code: In the event Consultant incorporates any open-source or pre-existing code libraries into Company repositories, Consultant automatically assigns all rights in such libraries to Company and warrants that no third-party licenses apply.
+
+5. TERM AND TERMINATION
+Either party may terminate this Agreement upon fourteen (14) days written notice. In the event of termination, Consultant shall immediately deliver all source code repositories, tokens, and credentials to Company.
+
+6. LIMITATION OF LIABILITY
+Neither party's liability for direct damages shall exceed the aggregate fees paid under this Agreement, EXCEPT that Consultant's liability for violation of Section 3 (Non-Competition) or Section 4 (Proprietary Information) shall be completely uncapped. Under no circumstances shall Company be liable for Consultant's lost business opportunities or consequential damages.
+
+7. ARBITRATION & VENUE
+Any dispute arising under this Agreement shall be settled by confidential binding arbitration administered by JAMS in Dover, Delaware. The arbitration shall be conducted before a single arbitrator, and each party shall bear its own legal fees and expenses.

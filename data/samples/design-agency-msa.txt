@@ -1,0 +1,32 @@
+MASTER SERVICES AGREEMENT
+
+This Master Services Agreement ("Agreement") is entered into as of January 15, 2025, by and between Apex Creative Studio Inc., a Delaware corporation ("Client"), and the undersigned independent contractor ("Contractor").
+
+SECTION 1. SCOPE OF WORK & DELIVERABLES
+Contractor shall perform design, branding, and digital media production services as set forth in one or more Statements of Work ("SOW") executed by the parties. Contractor shall devote necessary professional time to ensure timely completion.
+
+SECTION 2. COMPENSATION & PAYMENT TERMS
+2.1 Invoicing: Contractor shall submit monthly invoices detailing hours and milestone deliverables completed.
+2.2 Payment Window: Client shall inspect and pay all undisputed invoices within sixty (60) days following receipt of Contractor's invoice ("Net-60").
+2.3 Disputed Amounts: In the event of any good-faith invoice inquiry, Client reserves the right to withhold total payment for the applicable billing period until final resolution. No interest or late fees shall accrue on any withheld amounts.
+
+SECTION 3. TERM & TERMINATION
+3.1 Convenience: Client may terminate this Agreement or any active SOW at any time, with or without cause, in its sole discretion, upon zero (0) days prior written notice to Contractor. Contractor may terminate only upon sixty (60) days written notice.
+3.2 Payment on Termination: Upon termination by Client for convenience, Contractor shall be compensated strictly for fully accepted milestones signed off in writing prior to notice. No payment shall be made for work-in-progress, unapproved drafts, or unused sprint allocations.
+
+SECTION 4. INTELLECTUAL PROPERTY & WORK PRODUCT
+4.1 Ownership of Deliverables: All materials, code, designs, mockups, documentation, and inventions created by Contractor under this Agreement shall be deemed "work made for hire" for Client. Client shall be the sole and exclusive owner worldwide of all patent, copyright, trade secret, and trademark rights.
+4.2 Pre-Existing Works & Tools: Contractor hereby assigns, transfers, and conveys to Client all right, title, and interest in any pre-existing software, frameworks, design systems, illustrations, or proprietary methodologies utilized in the performance of the Services. Contractor retains no background rights or licenses.
+4.3 Moral Rights & Publicity: Contractor irrevocably waives all moral rights, rights of paternity, and rights of attribution in the Deliverables. Contractor shall not disclose Client's name, display any project deliverables in Contractor's portfolio or case studies, or issue any public statements without prior written approval from Client.
+
+SECTION 5. INDEMNIFICATION & WARRANTIES
+5.1 Contractor Indemnity: Contractor shall defend, indemnify, and hold harmless Client, its affiliates, directors, and clients against any and all claims, damages, liabilities, costs, and attorney fees arising out of, related to, or resulting from any alleged infringement of third-party intellectual property, negligence, or breach of any representation made herein, regardless of fault or whether Client provided underlying reference materials.
+5.2 Disclaimer: Client makes no warranties, express or implied, regarding its infrastructure, specifications, or market performance.
+
+SECTION 6. LIMITATION OF LIABILITY
+6.1 Client Cap: Client's maximum cumulative liability arising out of or related to this Agreement shall be limited to $500.00.
+6.2 Contractor Liability: Contractor's liability for breach of confidentiality, intellectual property covenants, or indemnification obligations shall be unlimited and not subject to any contractual ceiling.
+6.3 Consequential Damages: Contractor shall be liable for indirect, incidental, punitive, and lost-revenue damages suffered by Client due to delayed project deadlines.
+
+SECTION 7. GOVERNING LAW & JURISDICTION
+This Agreement shall be governed by and construed under the laws of the State of California, without regard to conflicts of law principles. Any legal suit, action, or proceeding arising out of this Agreement shall be instituted exclusively in the federal or state courts located in San Francisco, California.
