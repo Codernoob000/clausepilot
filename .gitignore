@@ -1,0 +1,46 @@
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Secrets and Environment Variables
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Model, Vector & Embedding caches
+.cache/
+data/cache/
+*.chroma/
+chroma_db/
+
+# Temporary uploads and large media
+temp/
+uploads/
+*.zip
+*.tar.gz
+
+# IDE and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
