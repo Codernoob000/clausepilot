@@ -20,6 +20,12 @@ def extract_text_from_file(filename: str, file_bytes: bytes) -> Tuple[str, int]:
                 txt = p.extract_text() or ""
                 pages_text.append(txt)
             full_text = "\n\n".join(pages_text).strip()
+            if not full_text:
+                raise ValueError(
+                    "No readable text could be extracted from this PDF. If this is a scanned document or image-only PDF, "
+                    "optical character recognition (OCR) is not currently supported; please upload a digital PDF, Word (.docx), "
+                    "or plain text (.txt) document."
+                )
             return full_text, len(reader.pages)
         except Exception as e:
             logger.error(f"Failed to extract text from PDF: {e}")
