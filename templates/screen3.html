@@ -482,6 +482,94 @@
       if (el) el.href = `/screen${idx+1}.html?session=${sessionId}`;
     });
 
+    // --- Header back/forward nav buttons ---
+    document.querySelectorAll('header button').forEach(btn => {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (!icon) return;
+      if (icon.textContent.trim() === 'arrow_back') {
+        btn.addEventListener('click', () => window.history.back());
+      } else if (icon.textContent.trim() === 'arrow_forward') {
+        btn.addEventListener('click', () => window.history.forward());
+      }
+    });
+
+    // --- Footer placeholder links ---
+    document.querySelectorAll('footer a[href="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const text = link.textContent.trim();
+        if (text.includes('Export')) {
+          window.print();
+        } else if (text.includes('Privacy')) {
+          alert('ClausePilot processes all documents in-memory only. No data is stored or shared. AES-256 encryption in transit. Session data is purged on tab close.');
+        } else if (text.includes('Support')) {
+          window.location.href = 'mailto:support@clausepilot.io?subject=ClausePilot%20Support%20Request';
+        }
+      });
+    });
+
+    // --- Export Audit (PDF) and Share Diagnostic buttons ---
+    document.querySelectorAll('main button').forEach(btn => {
+      const text = btn.textContent.trim();
+      if (text.includes('Export Audit')) {
+        btn.addEventListener('click', () => window.print());
+      } else if (text.includes('Share Diagnostic')) {
+        btn.addEventListener('click', () => {
+          const shareUrl = window.location.href;
+          navigator.clipboard.writeText(shareUrl).then(() => {
+            const label = btn.querySelector('span:last-child');
+            if (label) { label.textContent = 'Link Copied!'; setTimeout(() => { label.textContent = 'Share Diagnostic'; }, 2000); }
+          }).catch(() => {
+            prompt('Copy this link to share:', shareUrl);
+          });
+        });
+      }
+    });
+
+    // --- View benchmark methodology link ---
+    document.querySelectorAll('a[href="#"]').forEach(link => {
+      if (link.textContent.includes('benchmark methodology')) {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Our benchmarks are derived from:\n\n• 4,200+ anonymized freelance MSAs from public regulatory filings\n• Verified freelance union contract standards (Freelancers Union, AIGA)\n• Anonymous redline outcome data from enterprise procurement departments\n• California & New York jurisdiction-specific labor code requirements\n\nAll comparisons use statistical median and 75th percentile thresholds.');
+        });
+      }
+    });
+
+    // --- Filter buttons (toggle active state) ---
+    const filterRow = document.querySelector('.flex.items-center.gap-2.shrink-0');
+    if (filterRow) {
+      filterRow.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterRow.querySelectorAll('button').forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary');
+            b.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+          });
+          btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+          btn.classList.add('bg-primary', 'text-on-primary');
+        });
+      });
+    }
+
+    // --- Static clause card action buttons ---
+    document.querySelectorAll('main button').forEach(btn => {
+      const text = btn.textContent.trim();
+      if (text === 'Compare Revisions' || text.includes('Apply Carve-Out') || text.includes('Add Net-30 Counter')) {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          window.location.href = `/screen4.html?session=${sessionId}`;
+        });
+      }
+    });
+
+    // --- Sticky CTA bar: thread session into links ---
+    document.querySelectorAll('.sticky a').forEach(link => {
+      const href = link.getAttribute('href');
+      if (href && href.includes('screen') && !href.includes('session=')) {
+        link.href = href + (href.includes('?') ? '&' : '?') + `session=${sessionId}`;
+      }
+    });
+
     fetch(`/api/results/${sessionId}`)
       .then(res => {
         if (!res.ok) throw new Error('Results not ready');

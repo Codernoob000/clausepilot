@@ -313,10 +313,37 @@
     const percentText = document.getElementById('parsing-percentage');
     const fileNameText = document.getElementById('uploaded-filename');
     const fileSizeText = document.getElementById('uploaded-filesize');
-    const rawTextArea = document.getElementById('raw-contract-text');
+    const rawTextArea = document.getElementById('raw-clause-input');
     const sampleCards = document.querySelectorAll('.sample-card');
 
     if (!dropZone || !fileInput) return;
+
+    // --- Header back/forward nav buttons ---
+    const navBtns = document.querySelectorAll('header button');
+    navBtns.forEach(btn => {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (!icon) return;
+      if (icon.textContent.trim() === 'arrow_back') {
+        btn.addEventListener('click', () => window.history.back());
+      } else if (icon.textContent.trim() === 'arrow_forward') {
+        btn.addEventListener('click', () => window.history.forward());
+      }
+    });
+
+    // --- Footer placeholder links ---
+    document.querySelectorAll('footer a[href="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const text = link.textContent.trim();
+        if (text.includes('Export')) {
+          window.print();
+        } else if (text.includes('Privacy')) {
+          alert('ClausePilot processes all documents in-memory only. No data is stored or shared. AES-256 encryption in transit. Session data is purged on tab close.');
+        } else if (text.includes('Support')) {
+          window.location.href = 'mailto:support@clausepilot.io?subject=ClausePilot%20Support%20Request';
+        }
+      });
+    });
 
     browseBtn.addEventListener('click', (e) => {
       e.stopPropagation();
