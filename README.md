@@ -8,7 +8,7 @@
 
 > **Theme:** AI for Legal Assistance & Access  
 > **Repository:** [https://github.com/Codernoob000/clausepilot](https://github.com/Codernoob000/clausepilot)  
-> **Live Deployed URL:** [https://type-styles-compounds-competitors.trycloudflare.com](https://type-styles-compounds-competitors.trycloudflare.com)  
+> **Live Deployed URL:** [https://clausepilot.onrender.com](https://clausepilot.onrender.com)  
 > **Walkthrough Demo Video:** `clausepilot_demo_walkthrough_1790318102405.webp` (Recorded live session)
 
 ---
