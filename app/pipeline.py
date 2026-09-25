@@ -140,21 +140,19 @@ def execute_full_pipeline(session_id: str, contract_text: str, filename: str):
             clauses_found_so_far=len(raw_clauses)
         )
 
-        # --- STAGE 2: RAG Comparison & Deviation Scoring (Call 2) ---
-        analyzed_clauses: List[AnalyzedClause] = []
-        for idx, raw_clause in enumerate(raw_clauses):
+        # --- STAGE 2: RAG Comparison & Deviation Scoring (Call 2 & Call 3) ---
+        from concurrent.futures import ThreadPoolExecutor
+
+        def process_single_clause(raw_clause: RawExtractedClause) -> AnalyzedClause:
             matches = retriever.search(raw_clause.original_text, top_k=2, category=raw_clause.category)
             bench_res = call_2_benchmark_risk_agent(raw_clause, matches)
-            
-            # --- STAGE 3: Plain-Language Translation (Call 3) ---
             plain_eng = call_3_plain_language_agent(
                 raw_clause.title,
                 raw_clause.original_text,
                 bench_res.get("severity", "low"),
                 bench_res.get("rationale", "")
             )
-
-            analyzed = AnalyzedClause(
+            return AnalyzedClause(
                 id=raw_clause.id,
                 section=raw_clause.section,
                 title=raw_clause.title,
@@ -167,14 +165,17 @@ def execute_full_pipeline(session_id: str, contract_text: str, filename: str):
                 rationale=bench_res.get("rationale", "Standard clause."),
                 deviation_points=bench_res.get("deviation_points", [])
             )
-            analyzed_clauses.append(analyzed)
+
+        analyzed_clauses: List[AnalyzedClause] = []
+        with ThreadPoolExecutor(max_workers=3) as executor:
+            analyzed_clauses = list(executor.map(process_single_clause, raw_clauses))
 
         sessions.update_status(
             session_id,
             stage=3,
             stage_label="Identifying Unfavorable Terms",
-            percent=70,
-            eta_seconds=4
+            percent=75,
+            eta_seconds=3
         )
 
         # Compute overall contract risk score (0 to 100)

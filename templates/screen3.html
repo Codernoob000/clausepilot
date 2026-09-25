@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed":"#c3e8fb","surface-container-highest":"#e1e3e1","on-primary-fixed-variant":"#124d5d","secondary-fixed":"#b6ecf6","on-tertiary-fixed":"#001f2a","background":"#f9faf8","outline":"#70787c","surface-variant":"#e1e3e1","on-secondary-container":"#356a73","primary-fixed-dim":"#9acee1","surface-container-lowest":"#ffffff","error-container":"#ffdad6","on-primary":"#ffffff","on-surface-variant":"#40484b","surface-container-low":"#f3f4f2","on-background":"#191c1b","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#134e57","primary-fixed":"#b6ebfe","inverse-primary":"#9acee1","primary-container":"#134e5e","tertiary-container":"#284c5c","surface-container":"#edeeec","on-error":"#ffffff","on-secondary-fixed":"#001f24","on-tertiary-container":"#97bcce","inverse-on-surface":"#f0f1ef","secondary-fixed-dim":"#9acfda","on-surface":"#191c1b","on-error-container":"#93000a","tertiary":"#0d3544","surface-bright":"#f9faf8","on-primary-fixed":"#001f28","on-primary-container":"#8abed1","surface":"#f9faf8","on-secondary":"#ffffff","secondary":"#30666f","inverse-surface":"#2e3130","surface-dim":"#d9dad8","surface-tint":"#306576","on-tertiary-fixed-variant":"#274b5b","surface-container-high":"#e7e8e6","tertiary-fixed-dim":"#a7ccdf","outline-variant":"#c0c8cb","error":"#ba1a1a","primary":"#003644","secondary-container":"#b3e9f3"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-mobile":"1.25rem","space-md":"1rem","gutter":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter-mobile":"1rem","margin":"2.5rem","space-lg":"1.5rem","space-xl":"2.5rem"},"fontFamily":{"label-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"]},"fontSize":{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0","fontWeight":"400"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"0","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"500"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(15,55,70,0.04)]"><div class="h-20 w-full px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-sm group" data-path="upload-contract" id="nav-step-1" href="/screen1.html"><img alt="ClausePilot Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W_ULNqZ2-UmfwHm85QkPKizHlSPrkLp9TAkwNus1bd0l29ZhXCc4XrBGfA2yOrnLSKBeyXSCLBh6KN-xI8O_1G6DVK1s31rtXVRG876IQ-xmvp-Kxif-Ir5_jg5gdXlDyVY-qzfAuB7tMvU5yH3t90ib0n9NjZC80E44gKk6V2KzUcw5scnrfcnzYgdkwkqxd-SPDweMty-Q4AY3ZiDvNl7U8WAWBZSC_dMdut7Oh2h6m6kzhxXOkQD9k"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">ClausePilot</span><span class="font-label-sm text-label-sm text-on-surface-variant font-normal">Contract Copilot</span></div></a><div class="h-6 w-px bg-outline-variant hidden sm:block"></div><div class="hidden md:flex items-center gap-1.5 px-space-sm py-1 bg-surface-container-low rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Informational tool · Not formal legal advice</span></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-2 px-3 py-1.5 bg-surface-container rounded-lg"><span class="material-symbols-outlined text-secondary text-base">description</span><span class="font-label-md text-label-md text-on-surface truncate max-w-[220px]">Contract Analysis Workspace</span><span class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-secondary font-semibold">v1.2</span></div><div class="flex items-center gap-3 pl-space-xs"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface">Demo User</div><div class="font-label-sm text-label-sm text-on-surface-variant">Contractor</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_3px_rgba(15,55,70,0.08)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7hWCbjsSbON-FuzFydiyQEoVq_D_4lzInthw-1JJVlKsXZKzVrjZVb1AgQ-kFK8f9NGB5ntN4x-kx7OeNGRXIEcy0dPKzJhMHUePxGFvwi-NkD3tj9JCNwOFryqCCpnFxktYgCafcaeUrOywB9qURmOdozgaJ8Xt44wV9Y23qQKYgebWVjVsCth6QTN6nhVXZB-CI6mEhQagEHWC6AmzU0HePx7St25U98fzMc5zyRhWPw6NZHy0wUg"/></div></div></div><div class="bg-surface-container-low px-space-lg py-2 flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1 text-on-surface-variant"><button class="p-1 rounded hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-base">arrow_back</span></button><button class="p-1 rounded hover:bg-surface-container-high hover:text-on-surface transition-colors flex items-center justify-center" type="button"><span class="material-symbols-outlined text-base">arrow_forward</span></button></div><div class="h-4 w-px bg-outline-variant"></div><nav class="flex items-center gap-1.5 overflow-x-auto py-0.5" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-[0_1px_3px_rgba(15,55,70,0.08)]"><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md px-3 py-1 rounded-full transition-colors whitespace-nowrap" data-path="upload-contract" id="nav-step-1" href="/screen1.html">1. Upload</a><span class="text-outline-variant font-label-sm text-label-sm">›</span><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md px-3 py-1 rounded-full transition-colors whitespace-nowrap" data-path="analysis-and-progress" id="nav-step-2" href="/screen2.html">2. Analysis</a><span class="text-outline-variant font-label-sm text-label-sm">›</span><a aria-current="page" class="px-3 py-1 rounded-full transition-colors whitespace-nowrap bg-primary-container text-on-primary font-semibold shadow-[0_1px_3px_rgba(15,55,70,0.08)]" data-path="clause-breakdown-and-benchmarks" id="nav-step-3" href="/screen3.html">3. Clause Breakdown</a><span class="text-outline-variant font-label-sm text-label-sm">›</span><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md px-3 py-1 rounded-full transition-colors whitespace-nowrap" data-path="counter-proposal-draft" id="nav-step-4" href="/screen4.html">4. Counter-Draft</a><span class="text-outline-variant font-label-sm text-label-sm">›</span><a class="text-on-surface-variant hover:text-on-surface font-label-md text-label-md px-3 py-1 rounded-full transition-colors whitespace-nowrap" data-path="attorney-prep-sheet" id="nav-step-5" href="/screen5.html">5. Attorney Prep</a></nav></div><div class="hidden md:flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-sm text-secondary">lock</span><span>Private session · In-memory parsing only</span></div></div><div class="bg-secondary-container/40 px-space-lg py-1.5 flex items-center justify-center gap-2 text-center text-on-secondary-container"><span class="material-symbols-outlined text-sm font-semibold">verified_user</span><span class="font-label-sm text-label-sm">Your uploaded documents are processed privately in memory and never used to train public models.</span></div></header><main class="w-full pt-20 bg-surface flex-1"><div class="pt-20 pb-space-xl max-w-6xl mx-auto px-6"><div class="min-h-[560px]"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow Canvas Background -->
+<div class="relative w-full space-y-space-xl">
+<!-- Editorial Stage Marker & Document Meta Row -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-md pb-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container tracking-wider uppercase">Stage 03 / 05</span>
+<span class="font-label-sm text-label-sm text-outline">·</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Diagnostic Complete</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Contract Diagnostic &amp; Market Benchmarks</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Independent legal risk evaluation for <span class="text-on-surface font-semibold">Client Organization MSA v1.2</span>. Objective comparisons against 4,200+ verified creative service agreements.
+        </p>
+</div>
+<!-- Action Utilities -->
+<div class="flex items-center gap-2 self-start sm:self-auto">
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-base text-secondary">file_download</span>
+<span>Export Audit (PDF)</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-base text-secondary">share</span>
+<span>Share Diagnostic</span>
+</button>
+</div>
+</div>
+<!-- 1. Executive Summary & Calm Severity Meter Header -->
+<div class="flex flex-col gap-space-md">
+<!-- Metrics Grid (Bento style, soft tone, no harsh borders) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Scope Examined</span>
+<span class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-lg">fact_check</span>
+</span>
+</div>
+<div class="mt-4">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">38</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">clauses mapped</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">100% text parsed across 14 sections</p>
+</div>
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Attention Needed</span>
+<span class="w-8 h-8 rounded-full bg-error-container/60 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-lg">flag</span>
+</span>
+</div>
+<div class="mt-4">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">3</span>
+<span class="font-label-md text-label-md text-error font-semibold">Flagged terms</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-error"></span><span>1 High</span>
+<span class="w-2 h-2 rounded-full bg-secondary ml-1"></span><span>1 Medium</span>
+<span class="w-2 h-2 rounded-full bg-surface-tint ml-1"></span><span>1 Advisory</span>
+</div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Market Standard</span>
+<div class="relative w-8 h-8 flex items-center justify-center">
+<svg class="w-8 h-8 -rotate-90" viewbox="0 0 36 36">
+<circle class="text-surface-container-high" cx="18" cy="18" fill="none" r="15" stroke="currentColor" stroke-width="3"></circle>
+<circle class="text-secondary" cx="18" cy="18" fill="none" r="15" stroke="currentColor" stroke-dasharray="94.2" stroke-dashoffset="33.9" stroke-linecap="round" stroke-width="3"></circle>
+</svg>
+<span class="absolute font-label-sm text-label-sm font-bold text-primary">64</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl text-primary font-bold">64<span class="font-body-md text-body-md text-outline">/100</span></span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">Fair</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Acceptable base with 2 out-of-market deviations</p>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Protection Target</span>
+<span class="w-8 h-8 rounded-full bg-secondary-container/60 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-lg">shield</span>
+</span>
+</div>
+<div class="mt-4">
+<div class="font-headline-sm text-headline-sm text-primary font-bold leading-tight">IP Retained &amp; Net-30</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>Protects $18,400 toolkits + 45 days liquidity</span>
+</p>
+</div>
+</div>
+</div>
+<!-- Composed Severity Gauge (Non-alarmist, measured and empowering) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined">tune</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary">Moderate Contract Posture</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-semibold">3 Actionable Counters Available</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl">
+              This agreement is generally standard in confidentiality and governing law, but overreaches in design asset rights and liquidity terms. Resolving the 3 items below restores parity without jeopardizing client goodwill.
+            </p>
+</div>
+</div>
+<!-- Horizontal Multi-Tone Segment Gauge -->
+<div class="w-full md:w-80 flex flex-col gap-2 shrink-0">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-medium">Agreement Equilibrium</span>
+<span class="text-secondary font-semibold">68% Balanced</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container-high flex overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-secondary" style="width: 68%;"></div>
+<div class="h-full rounded-full bg-error ml-1 opacity-80" style="width: 14%;"></div>
+<div class="h-full rounded-full bg-primary-fixed ml-1" style="width: 18%;"></div>
+</div>
+<div class="flex justify-between text-[11px] text-outline">
+<span>Low Risk (35)</span>
+<span class="text-error font-medium">Flagged (3)</span>
+</div>
+</div>
+</div>
+<!-- Filter / Category Segment Controls -->
+<div class="flex items-center justify-between gap-4 overflow-x-auto py-1">
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md transition-colors shadow-sm flex items-center gap-2" type="button">
+<span>Flagged for Review</span>
+<span class="px-1.5 py-0.2 rounded-full bg-on-primary/20 text-on-primary font-label-sm text-label-sm">3</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-on-surface-variant font-label-md text-label-md transition-colors shadow-sm flex items-center gap-2" type="button">
+<span>All Clauses</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">38</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-on-surface-variant font-label-md text-label-md transition-colors shadow-sm flex items-center gap-2" type="button">
+<span>High Severity</span>
+<span class="px-1.5 py-0.2 rounded-full bg-error-container text-error font-label-sm text-label-sm font-semibold">1</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-on-surface-variant font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span>Payment &amp; Terms</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low text-on-surface-variant font-label-md text-label-md transition-colors shadow-sm" type="button">
+<span>Intellectual Property</span>
+</button>
+</div>
+<div class="hidden xl:flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-sm text-secondary">info</span>
+<span>Click any clause to inspect benchmark breakdown</span>
+</div>
+</div>
+</div>
+<!-- 2. Interactive Scannable Cards for Flagged Clauses -->
+<div class="flex flex-col gap-space-lg">
+<!-- CARD 1: HIGH SEVERITY (EXPANDED COMPARISON VIEW BY DEFAULT) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md transition-all duration-200 overflow-hidden" id="clause-card-1">
+<!-- Card Header / Summary Trigger Bar -->
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest hover:bg-surface-container-low/40 cursor-pointer transition-colors" onclick="toggleClause('clause-card-1')">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-error-container flex items-center justify-center text-error shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">priority_high</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Section 9.4 — Broad IP Assignment &amp; Pre-Existing Inventions</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-error-container text-error font-semibold tracking-wide">
+                  High Risk · Uncapped Assignment
+                </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Client claims ownership of all work created during the contract period, including your proprietary design toolkits, starter UI systems, and prior code libraries.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-center">
+<div class="text-right hidden lg:block">
+<div class="font-label-sm text-label-sm text-outline">Market Adoption</div>
+<div class="font-label-md text-label-md text-error font-semibold">6% of industry MSA drafts</div>
+</div>
+<button aria-label="Toggle section" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-transform duration-200 clause-chevron rotate-180" type="button">
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Card Body: Expanded Multi-Panel Benchmark View -->
+<div class="clause-content px-space-lg pb-space-lg pt-space-xs flex flex-col gap-space-md">
+<!-- Key Insight Strip -->
+<div class="p-3.5 rounded-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">analytics</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Freelancer Benchmark Baseline:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Most independent commercial contracts limit assignment strictly to the bespoke final client delivery.</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium shrink-0">Sample size: 2,840 MSA reviews</span>
+</div>
+<!-- 3-Column Comparative Editorial Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Panel A: Original Legal Excerpt -->
+<div class="bg-surface-container-low/70 p-space-md rounded-lg flex flex-col justify-between">
+<div class="space-y-2">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">As Written in Agreement</span>
+<span class="material-symbols-outlined text-sm text-outline">gavel</span>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded font-body-sm text-body-sm text-on-surface leading-relaxed italic">
+                  “Contractor hereby irrevocably assigns to Client all right, title, and interest in and to all inventions, original works of authorship, and design systems conceived, reduced to practice, or authored during the term of this Agreement...”
+                </div>
+</div>
+<div class="mt-3 pt-2 text-[12px] text-outline flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs">warning</span>
+<span>Includes no carve-outs for pre-existing IP</span>
+</div>
+</div>
+<!-- Panel B: Plain Language Translation -->
+<div class="bg-surface-container-low/70 p-space-md rounded-lg flex flex-col justify-between">
+<div class="space-y-2">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-error">Plain-English Impact</span>
+<span class="material-symbols-outlined text-sm text-error">translate</span>
+</div>
+<div class="p-3 bg-error-container/20 rounded font-body-sm text-body-sm text-on-surface leading-relaxed">
+                  You forfeit the legal right to reuse your personal starter frameworks, typography licensing systems, base UI kits, and component templates on any other future client engagements.
+                </div>
+</div>
+<div class="mt-3 pt-2 text-[12px] text-error font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs">cancel</span>
+<span>Asymmetric commercial hazard</span>
+</div>
+</div>
+<!-- Panel C: Market Standard Practice -->
+<div class="bg-surface-container-low/70 p-space-md rounded-lg flex flex-col justify-between">
+<div class="space-y-2">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Balanced Market Standard</span>
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+</div>
+<div class="p-3 bg-secondary-container/30 rounded font-body-sm text-body-sm text-on-surface leading-relaxed">
+                  Assignment transfers <span class="font-semibold text-primary">only upon 100% receipt of final compensation</span>, and expressly excludes and licenses back your pre-existing contractor materials.
+                </div>
+</div>
+<div class="mt-3 pt-2 text-[12px] text-secondary font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs">check_circle</span>
+<span>Ready-to-use amendment drafted</span>
+</div>
+</div>
+</div>
+<!-- Micro-Action Strip for this clause -->
+<div class="pt-2 flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-secondary">auto_fix_high</span>
+<span>Copilot has prepared a 2-sentence compromise carve-out ready for injection.</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors" type="button">
+                Compare Revisions
+              </button>
+<button class="px-4 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors flex items-center gap-1.5 shadow-sm" type="button">
+<span>Apply Carve-Out to Counter</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- CARD 2: MEDIUM SEVERITY (COLLAPSIBLE) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden" id="clause-card-2">
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest hover:bg-surface-container-low/40 cursor-pointer transition-colors" onclick="toggleClause('clause-card-2')">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed/50 flex items-center justify-center text-on-secondary-fixed-variant shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">schedule</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Section 4.1 — Payment Schedule: Net-75 Days with Discretionary Acceptance</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-semibold tracking-wide">
+                  Medium Risk · Cashflow Lag
+                </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Payment isn't released until 2.5 months post-milestone invoice. The client retains unilateral authority to hold review cycles open without automatic deeming.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-center">
+<div class="text-right hidden lg:block">
+<div class="font-label-sm text-label-sm text-outline">Market Benchmark</div>
+<div class="font-label-md text-label-md text-secondary font-semibold">Net-15 to Net-30 Standard</div>
+</div>
+<button aria-label="Toggle section" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-transform duration-200 clause-chevron" type="button">
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Collapsible Content Panel (Hidden by default) -->
+<div class="clause-content hidden px-space-lg pb-space-lg pt-space-xs flex-col gap-space-md">
+<div class="p-3.5 rounded-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">analytics</span>
+<span class="font-label-md text-label-md text-primary font-semibold">Working Capital Standard:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">88% of tech and brand agency contracts adopt Net-30 with a 7-day deemed acceptance clause.</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-medium shrink-0">Sample size: 1,920 engagements</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low/70 p-space-md rounded-lg space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Contract Extract</span>
+<div class="p-3 bg-surface-container-lowest rounded font-body-sm text-body-sm text-on-surface leading-relaxed italic">
+                “Client shall remit undisputed payments within seventy-five (75) days following internal stakeholder acceptance and procurement authorization...”
+              </div>
+</div>
+<div class="bg-surface-container-low/70 p-space-md rounded-lg space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Working Capital Risk</span>
+<div class="p-3 bg-secondary-fixed/20 rounded font-body-sm text-body-sm text-on-surface leading-relaxed">
+                You carry operational overhead for nearly 3 full months per milestone. Indefinite review periods leave deliverables vulnerable to silent timeline extensions.
+              </div>
+</div>
+<div class="bg-surface-container-low/70 p-space-md rounded-lg space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Target Amendment</span>
+<div class="p-3 bg-secondary-container/30 rounded font-body-sm text-body-sm text-on-surface leading-relaxed">
+                Propose <span class="font-semibold text-primary">Net-30 payment terms</span> paired with an explicit 7-business-day inspection window, after which milestone work is automatically deemed approved.
+              </div>
+</div>
+</div>
+<div class="pt-2 flex flex-wrap items-center justify-end gap-2">
+<button class="px-4 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors flex items-center gap-1.5" type="button">
+<span>Add Net-30 Counter to Draft</span>
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CARD 3: LOW SEVERITY / ADVISORY (COLLAPSIBLE) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden" id="clause-card-3">
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-lowest hover:bg-surface-container-low/40 cursor-pointer transition-colors" onclick="toggleClause('clause-card-3')">
+<div class="flex items-start gap-space-md">
+<div class="w-9 h-9 rounded-lg bg-tertiary-fixed/50 flex items-center justify-center text-on-tertiary-fixed-variant shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</div>
+<div class="space-y-1">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Section 12.1 — Non-Disparagement &amp; Portfolio Display Rights</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-semibold tracking-wide">
+                  Advisory · Standard Adjustment
+                </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Requires advance formal written consent from executive legal counsel before showcasing project artifacts in your creative case studies or portfolio.
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-center">
+<div class="text-right hidden lg:block">
+<div class="font-label-sm text-label-sm text-outline">Market Practice</div>
+<div class="font-label-md text-label-md text-tertiary font-semibold">Post-Launch Showcase Rights</div>
+</div>
+<button aria-label="Toggle section" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-transform duration-200 clause-chevron" type="button">
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+</div>
+</div>
+<div class="clause-content hidden px-space-lg pb-space-lg pt-space-xs flex-col gap-space-md">
+<div class="p-3.5 rounded-lg bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base">lightbulb</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+              Standard commercial practice permits freelancers to display publicly released artifacts 30 days post-launch with proprietary metrics redacted.
+            </span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<div class="bg-surface-container-low/70 p-space-md rounded-lg space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Contract Text</span>
+<div class="p-3 bg-surface-container-lowest rounded font-body-sm text-body-sm text-on-surface italic">
+                “Contractor shall not disclose, reproduce, or exhibit any artifacts or mentions of Client in marketing materials without express prior written approval...”
+              </div>
+</div>
+<div class="bg-surface-container-low/70 p-space-md rounded-lg space-y-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Friction-Free Counter</span>
+<div class="p-3 bg-surface-container-lowest rounded font-body-sm text-body-sm text-on-surface">
+                “Client grants Contractor standard non-exclusive rights to showcase final visual deliverables in professional portfolios and awards following public debut.”
+              </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Callout Card: How We Benchmark -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl mt-0.5">query_stats</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary font-semibold">Empirical Negotiation Grounding</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-2xl mt-0.5">
+            Our benchmarks are gathered from public regulatory filings, verified freelance union standards, and anonymous redline outcomes. When you negotiate with data, clients perceive clarity rather than resistance.
+          </p>
+</div>
+</div>
+<a class="font-label-md text-label-md text-secondary hover:text-primary font-semibold flex items-center gap-1 shrink-0 transition-colors" href="#">
+<span>View benchmark methodology</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+<!-- 3. Sticky Action Bar / Next Step CTA -->
+<div class="sticky bottom-4 z-40 w-full mt-space-lg">
+<div class="w-full bg-primary text-on-primary p-space-md sm:p-space-lg rounded-xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-space-md backdrop-blur-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest/15 flex items-center justify-center text-primary-fixed shrink-0 hidden sm:flex">
+<span class="material-symbols-outlined text-2xl">magic_button</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-semibold tracking-tight text-on-primary">Strategy Prepared</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary text-on-secondary font-bold">Recommended Step</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary-fixed-dim mt-0.5">
+              We translated Section 9.4 (IP) &amp; Section 4.1 (Net-75) into an executive, cordial email counter-proposal.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto justify-end shrink-0">
+<a class="px-4 py-2.5 rounded-lg bg-surface-container-lowest/10 hover:bg-surface-container-lowest/20 text-on-primary font-label-md text-label-md transition-colors text-center whitespace-nowrap" data-path="attorney-prep-sheet" id="nav-step-5" href="/screen5.html">
+            Attorney Prep Checklist
+          </a>
+<a class="px-5 py-2.5 rounded-lg bg-primary-fixed hover:bg-white text-on-primary-fixed font-label-lg text-label-lg font-bold transition-all shadow-md flex items-center justify-center gap-2 whitespace-nowrap group" data-path="counter-proposal-draft" id="nav-step-4" href="/screen4.html">
+<span>Generate Counter-Draft</span>
+<span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let sessionData = null;
+
+  function toggleClause(cardId) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
+    const content = card.querySelector('.clause-content');
+    const chevron = card.querySelector('.clause-chevron');
+    
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      content.classList.add('flex');
+      if (chevron) chevron.classList.add('rotate-180');
+    } else {
+      content.classList.add('hidden');
+      content.classList.remove('flex');
+      if (chevron) chevron.classList.remove('rotate-180');
+    }
+  }
+
+  (function initResultsRenderer() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const sessionId = urlParams.get('session');
+
+    if (!sessionId) {
+      alert('No active session found. Redirecting to upload.');
+      window.location.href = '/screen1.html';
+      return;
+    }
+
+    // Thread session across navigation
+    ['nav-step-1', 'nav-step-2', 'nav-step-3', 'nav-step-4', 'nav-step-5'].forEach((id, idx) => {
+      const el = document.getElementById(id);
+      if (el) el.href = `/screen${idx+1}.html?session=${sessionId}`;
+    });
+
+    fetch(`/api/results/${sessionId}`)
+      .then(res => {
+        if (!res.ok) throw new Error('Results not ready');
+        return res.json();
+      })
+      .then(data => {
+        sessionData = data;
+        renderResults(data, sessionId);
+      })
+      .catch(err => {
+        console.error('Error fetching results:', err);
+        // Retry in 1.5s in case still completing
+        setTimeout(() => {
+          fetch(`/api/results/${sessionId}`).then(r => r.json()).then(data => {
+            sessionData = data;
+            renderResults(data, sessionId);
+          });
+        }, 1500);
+      });
+
+    function renderResults(data, sid) {
+      // Top bar filename
+      const titleEl = document.querySelector('header span.truncate');
+      if (titleEl) titleEl.textContent = data.filename;
+
+      // Summary stat cards
+      const statNums = document.querySelectorAll('.summary-stat-value');
+      if (statNums.length >= 4) {
+        statNums[0].textContent = data.clause_count;
+        statNums[1].textContent = data.flagged_count;
+        statNums[2].textContent = `${data.risk_score}/100`;
+        statNums[3].textContent = data.risk_label;
+      }
+
+      // Action button link to counter-draft
+      const counterBtn = document.getElementById('btn-goto-counter');
+      const topClause = (data.clauses.find(c => c.severity === 'high') || data.clauses[0]);
+      if (counterBtn && topClause) {
+        counterBtn.href = `/screen4.html?session=${sid}&clause=${topClause.id}`;
+      }
+
+      // Render Dynamic Clause Cards
+      const container = document.getElementById('clauses-container');
+      if (!container) return;
+
+      container.innerHTML = '';
+      data.clauses.forEach((clause, idx) => {
+        const isFlagged = clause.severity === 'high' || clause.severity === 'medium';
+        const sevColor = clause.severity === 'high' 
+          ? 'bg-rose-500/10 text-rose-400 border-rose-500/30' 
+          : (clause.severity === 'medium' ? 'bg-amber-500/10 text-amber-400 border-amber-500/30' : 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30');
+        const sevLabel = clause.severity.toUpperCase() + ' RISK';
+
+        const cardHtml = `
+        <div id="clause-card-${clause.id}" class="bg-surface-container rounded-2xl border ${isFlagged ? 'border-outline-variant/60 shadow-md' : 'border-outline-variant/20'} overflow-hidden transition-all mb-4">
+          <div onclick="toggleClause('clause-card-${clause.id}')" class="p-6 cursor-pointer flex items-center justify-between gap-4 hover:bg-surface-container-high/40 transition-colors">
+            <div class="flex items-center gap-4 flex-1">
+              <span class="px-3 py-1 rounded-full text-xs font-bold border ${sevColor}">${sevLabel}</span>
+              <div>
+                <div class="text-xs text-on-surface-variant font-medium">${clause.section} · ${clause.category}</div>
+                <h3 class="text-base font-bold text-on-surface mt-0.5">${clause.title}</h3>
+              </div>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="text-right hidden sm:block">
+                <div class="text-xs text-on-surface-variant">Market Standard Adoption</div>
+                <div class="text-sm font-semibold text-primary">${clause.market_adoption_pct}% baseline</div>
+              </div>
+              <span class="material-symbols-outlined clause-chevron transition-transform duration-200 text-on-surface-variant">expand_more</span>
+            </div>
+          </div>
+          
+          <div class="clause-content hidden flex-col border-t border-outline-variant/30 p-6 bg-surface/50">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <!-- As Written -->
+              <div class="p-4 rounded-xl bg-surface-container border border-outline-variant/40 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center gap-2 text-xs font-semibold text-rose-400 mb-2">
+                    <span class="material-symbols-outlined text-sm">gavel</span>
+                    <span>As Written in Contract</span>
+                  </div>
+                  <p class="text-xs text-on-surface-variant leading-relaxed font-mono bg-surface/80 p-3 rounded-lg border border-outline-variant/20">${clause.original_text}</p>
+                </div>
+              </div>
+
+              <!-- Plain English -->
+              <div class="p-4 rounded-xl bg-surface-container border border-outline-variant/40 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center gap-2 text-xs font-semibold text-amber-400 mb-2">
+                    <span class="material-symbols-outlined text-sm">translate</span>
+                    <span>Plain-English Impact</span>
+                  </div>
+                  <p class="text-sm text-on-surface leading-relaxed">${clause.plain_english}</p>
+                  ${clause.rationale ? `<div class="mt-3 p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-xs text-amber-300"><strong>Deviation:</strong> ${clause.rationale}</div>` : ''}
+                </div>
+              </div>
+
+              <!-- Market Standard -->
+              <div class="p-4 rounded-xl bg-surface-container border border-outline-variant/40 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center gap-2 text-xs font-semibold text-emerald-400 mb-2">
+                    <span class="material-symbols-outlined text-sm">verified</span>
+                    <span>Balanced Market Standard</span>
+                  </div>
+                  <p class="text-xs text-on-surface-variant leading-relaxed italic bg-surface/80 p-3 rounded-lg border border-outline-variant/20">"${clause.market_standard_text}"</p>
+                  <div class="mt-3 flex items-center justify-between text-xs text-emerald-400">
+                    <span>${clause.market_adoption_pct}% Industry Adoption</span>
+                    <a href="/screen4.html?session=${sid}&clause=${clause.id}" class="underline font-semibold hover:text-emerald-300">Draft Counter &rarr;</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+
+        container.insertAdjacentHTML('beforeend', cardHtml);
+      });
+    }
+  })();
+</script></div></div></main><footer class="w-full bg-surface-container-low mt-auto"><div class="max-w-6xl mx-auto px-6 py-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-2"><span class="font-label-md text-label-md text-on-surface">ClausePilot</span><span>· Built for independent operators and creative professionals.</span></div><div class="flex items-center gap-space-lg font-label-md text-label-md"><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Export Summary (PDF)</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy &amp; Security Terms</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Copilot Support</a></div></div></footer></body></html>
