@@ -182,9 +182,22 @@ def execute_full_pipeline(session_id: str, contract_text: str, filename: str):
         flagged = [c for c in analyzed_clauses if c.severity in ("high", "medium")]
         high_count = sum(1 for c in analyzed_clauses if c.severity == "high")
         med_count = sum(1 for c in analyzed_clauses if c.severity == "medium")
-        
-        # Risk score formula: Start at 95, penalize 15 for each high flag, 6 for medium
-        computed_risk = max(18, 95 - (high_count * 15) - (med_count * 6))
+        total_clauses = max(1, len(analyzed_clauses))
+        high_ratio = high_count / total_clauses
+        med_ratio = med_count / total_clauses
+
+        # Base penalty from absolute flags + ratio penalty
+        penalty = (high_count * 20) + (med_count * 8) + int(high_ratio * 30) + int(med_ratio * 12)
+        computed_risk = max(18, 95 - penalty)
+
+        # Enforce realistic ceiling if severe risks exist
+        if high_count >= 2:
+            computed_risk = min(computed_risk, 42)
+        elif high_count == 1:
+            computed_risk = min(computed_risk, 54)
+        elif med_count >= 1:
+            computed_risk = min(computed_risk, 72)
+
         if computed_risk >= 75:
             risk_label = "Safe"
         elif computed_risk >= 55:
