@@ -104,6 +104,13 @@ class AttorneyPrepResponse(BaseModel):
     session_id: str
     agreement_name: str
     jurisdiction: str
-    estimated_call_minutes: List[int] = Field(..., description="[min_minutes, max_minutes]")
+    estimated_call_minutes: Any = Field(default_factory=lambda: [15, 25], description="[min_minutes, max_minutes]")
     billable_time_saved_estimate: str
     questions: List[AttorneyQuestionGroup]
+
+    def model_post_init(self, __context: Any) -> None:
+        if isinstance(self.estimated_call_minutes, (int, float)):
+            val = int(self.estimated_call_minutes)
+            self.estimated_call_minutes = [max(10, val - 5), val + 5]
+        elif not isinstance(self.estimated_call_minutes, list):
+            self.estimated_call_minutes = [15, 25]

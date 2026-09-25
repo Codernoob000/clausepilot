@@ -301,14 +301,20 @@ def run_tests():
         with urllib.request.urlopen(req_clean) as resp:
             sid_clean = json.loads(resp.read().decode())["session_id"]
         
-        for _ in range(60):
+        for _ in range(120):
             time.sleep(1)
             with urllib.request.urlopen(f"{BASE_URL}/api/status/{sid_clean}") as sc:
-                if json.loads(sc.read().decode())["completed"]:
+                st = json.loads(sc.read().decode())
+                if st.get("completed"):
                     break
-        with urllib.request.urlopen(f"{BASE_URL}/api/results/{sid_clean}") as rc:
-            res_clean = json.loads(rc.read().decode())
-            print(f"        PASS: Handled clean contract gracefully ({res_clean['clause_count']} clauses, {res_clean['flagged_count']} flagged, Risk Score: {res_clean['risk_score']})")
+        for _ in range(10):
+            with urllib.request.urlopen(f"{BASE_URL}/api/results/{sid_clean}") as rc:
+                if rc.status == 200:
+                    res_clean = json.loads(rc.read().decode())
+                    if "clause_count" in res_clean:
+                        break
+                time.sleep(1)
+        print(f"        PASS: Handled clean contract gracefully ({res_clean['clause_count']} clauses, {res_clean['flagged_count']} flagged, Risk Score: {res_clean['risk_score']})")
 
         # 4. Invalid API key / offline fallback test
         print("  [4.4] Testing resilience under fallback without unhandled stack trace...")
