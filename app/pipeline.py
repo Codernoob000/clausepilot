@@ -141,34 +141,55 @@ def execute_full_pipeline(session_id: str, contract_text: str, filename: str):
         )
 
         # --- STAGE 2: RAG Comparison & Deviation Scoring (Call 2 & Call 3) ---
-        from concurrent.futures import ThreadPoolExecutor
+        from app.llm import _fallback_benchmark
 
-        def process_single_clause(raw_clause: RawExtractedClause) -> AnalyzedClause:
-            matches = retriever.search(raw_clause.original_text, top_k=2, category=raw_clause.category)
-            bench_res = call_2_benchmark_risk_agent(raw_clause, matches)
-            plain_eng = call_3_plain_language_agent(
-                raw_clause.title,
-                raw_clause.original_text,
-                bench_res.get("severity", "low"),
-                bench_res.get("rationale", "")
-            )
-            return AnalyzedClause(
-                id=raw_clause.id,
-                section=raw_clause.section,
-                title=raw_clause.title,
-                category=raw_clause.category,
-                severity=bench_res.get("severity", "low"),
-                original_text=raw_clause.original_text,
-                plain_english=plain_eng,
-                market_standard_text=bench_res.get("market_standard_text", matches[0].standard_text if matches else "Standard balanced term."),
-                market_adoption_pct=bench_res.get("market_adoption_pct", matches[0].market_adoption_pct if matches else 85),
-                rationale=bench_res.get("rationale", "Standard clause."),
-                deviation_points=bench_res.get("deviation_points", [])
-            )
+        candidate_analyses = []
+        for raw_c in raw_clauses:
+            matches = retriever.search(raw_c.original_text, top_k=2, category=raw_c.category)
+            best_m = matches[0] if matches else None
+            heur_res = _fallback_benchmark(raw_c, best_m)
+            candidate_analyses.append({
+                "raw": raw_c,
+                "matches": matches,
+                "best_match": best_m,
+                "bench": heur_res
+            })
+
+        high_candidates = [c for c in candidate_analyses if c["bench"]["severity"] == "high"]
+        med_candidates = [c for c in candidate_analyses if c["bench"]["severity"] == "medium"]
+        target_candidate = high_candidates[0] if high_candidates else (med_candidates[0] if med_candidates else (candidate_analyses[0] if candidate_analyses else None))
 
         analyzed_clauses: List[AnalyzedClause] = []
-        with ThreadPoolExecutor(max_workers=3) as executor:
-            analyzed_clauses = list(executor.map(process_single_clause, raw_clauses))
+        for item in candidate_analyses:
+            raw_c = item["raw"]
+            matches = item["matches"]
+            best_m = item["best_match"]
+            bench_res = item["bench"]
+
+            if target_candidate and raw_c.id == target_candidate["raw"].id:
+                bench_res = call_2_benchmark_risk_agent(raw_c, matches)
+                plain_eng = call_3_plain_language_agent(
+                    raw_c.title,
+                    raw_c.original_text,
+                    bench_res.get("severity", "high"),
+                    bench_res.get("rationale", "")
+                )
+            else:
+                plain_eng = f"This clause defines standard terms regarding {raw_c.category.lower()}."
+
+            analyzed_clauses.append(AnalyzedClause(
+                id=raw_c.id,
+                section=raw_c.section,
+                title=raw_c.title,
+                category=raw_c.category,
+                severity=bench_res.get("severity", "low"),
+                original_text=raw_c.original_text,
+                plain_english=plain_eng,
+                market_standard_text=bench_res.get("market_standard_text", best_m.standard_text if best_m else "Standard balanced term."),
+                market_adoption_pct=bench_res.get("market_adoption_pct", best_m.market_adoption_pct if best_m else 85),
+                rationale=bench_res.get("rationale", "Standard clause."),
+                deviation_points=bench_res.get("deviation_points", [])
+            ))
 
         sessions.update_status(
             session_id,

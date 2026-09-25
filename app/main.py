@@ -4,6 +4,8 @@ import os
 import io
 import json
 import logging
+from dotenv import load_dotenv
+load_dotenv()
 import threading
 from typing import Optional, Dict, Any
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request, Query, status
@@ -46,6 +48,12 @@ SAMPLE_FILES = {
     "content-media-retainer": "content-media-retainer.txt",
     "licensing": "content-media-retainer.txt"
 }
+
+@app.on_event("startup")
+def startup_event():
+    from app.llm import API_KEY
+    logger.info(f"[STARTUP] Gemini API key loaded: {bool(API_KEY)}")
+    print(f"[STARTUP] Gemini API key loaded: {bool(API_KEY)}", flush=True)
 
 
 # --- Health Check ---
